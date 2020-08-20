@@ -7,6 +7,7 @@
   --color-bluegreen: #00a497;
 
   /* Font size */
+  --font-x-large: 30px;
   --font-large: 22px;
   --font-medium: 20px;
   --font-regular: 18px;
@@ -29,12 +30,17 @@
 /* Universial tags */
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 0;
   cursor: default;
+  height: 100%;
 }
 
 ul {
@@ -54,11 +60,25 @@ button {
 
 /* Typography */
 h1 {
-  font-size: var(--font-large);
+  margin-bottom: 25px;
+  font-size: var(--font-x-large);
+  font-weight: var(--weight-semi-bold);
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  margin-bottom: 25px;
 }
 
 p {
   font-size: var(--font-small);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-green);
 }
 
 /* Navbar */
@@ -84,4 +104,29 @@ p {
 .navbar__toggle-btn i {
   color: var(--color-white);
   font-size: 35px;
+}
+
+/* Home */
+#home {
+  background: url(/images/banner.jpg) center/cover no-repeat;
+  color: var(--color-white);
+  padding-bottom: 54px;
+}
+
+.home {
+  margin: 0px 32px;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+
+.home__buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.home__buttons .button {
+  padding: 10px 30px;
+  margin-right: 10px;
+  font-size: var(--font-small);
+  border-radius: var(--size-border-radius);
 }
