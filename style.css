@@ -1,0 +1,48 @@
+/* Global */
+:root {
+    /* Color */
+    --color-black: #030303;
+    --color-white: #ffffff;
+    --color-green: #1aaf82;
+    --color-bluegreen: #00a497;
+
+    /* Font size */
+    --font-large: 22px;
+    --font-medium: 20px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-x-samll: 14px;
+    --font-micro: 12;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+
+    /* Size */
+    --size-border-radius: 28px;
+
+    /* Animation */
+    --animation-duration: 0.25s;
+
+}
+
+/* Universial tags */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    cursor: default;
+}
+
+/* Typography */
+h1 {
+    font-size: var(--font-large);
+}
+
+p {
+    font-size: var(--font-small);
+}
