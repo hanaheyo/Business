@@ -98,7 +98,12 @@ a {
   margin: auto;
 }
 
-/* Hover comon */
+/* Text common */
+.text {
+  margin: auto;
+  max-width: 777px;
+  text-align: center;
+}
 
 /* Button common */
 .button {
@@ -202,13 +207,7 @@ a {
 
 /* Intro */
 #intro {
-  text-align: center;
   padding: 45px 0;
-}
-
-.intro__text {
-  margin: auto;
-  max-width: 777px;
 }
 
 .intro__text > h1,
@@ -263,7 +262,7 @@ a {
 .box__arrow {
   font-size: 25px;
   transform: translateX(-10px);
-  transition: all var(--animation-duration-fast) ease-in-out;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 .intro__boxes .box:hover .box__arrow {
@@ -344,9 +343,124 @@ a {
 
 .video__play {
   font-size: 52px;
+  background-color: transparent;
 }
 
 .video__play:hover {
   color: var(--color-green);
   transition: all var(--animation-duration) ease;
+}
+
+/* Work */
+#work {
+  padding-top: 45px;
+}
+.work__text h1 {
+  font-size: var(--font-x-large);
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: 30px;
+}
+
+.work__text p {
+  margin-bottom: 30px;
+  font-weight: var(--font-regular);
+  color: var(--color-gray);
+}
+
+.work__categories {
+  display: flex;
+  justify-content: center;
+  font-weight: var(--font-regular);
+  color: var(--color-gray);
+  padding-bottom: 30px;
+}
+
+.work__categories li {
+  padding: 0 20px;
+}
+
+.work__categories li.active,
+.work__categories li:hover {
+  color: var(--color-green);
+}
+
+.work__contents {
+  display: flex;
+  flex-direction: column;
+  max-width: 4558px;
+  margin: auto;
+}
+
+.three__contents {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+}
+
+.content__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content__image img {
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.content:hover img {
+  transform: scale(1.1);
+}
+
+.content__image .img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+}
+
+.content:hover .content__description {
+  background-color: rgba(0, 0, 0, 0.37);
+  color: var(--color-white);
+}
+
+.content__description h1,
+.content__description p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content__description h1 {
+  font-size: var(--font-x-large);
+}
+
+.content__arrow {
+  font-size: 36px;
+}
+
+.content__arrow {
+  transform: translateX(-10px);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.content:hover .content__arrow {
+  transform: translateX(0px);
+}
+
+.content__arrow:hover {
+  color: var(--color-green);
 }
