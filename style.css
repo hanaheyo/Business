@@ -3,12 +3,14 @@
   /* Color */
   --color-black: #030303;
   --color-gray: #333;
+  --color-light-gray: #efefef;
   --color-white: #ffffff;
   --color-green: #1aaf82;
   --color-bluegreen: #00a497;
 
   /* Font size */
-  --font-x-large: 30px;
+  --font-huge: 30px;
+  --font-x-large: 26px;
   --font-large: 22px;
   --font-medium: 20px;
   --font-regular: 18px;
@@ -61,7 +63,7 @@ button {
 
 /* Typography */
 h1 {
-  font-size: var(--font-x-large);
+  font-size: var(--font-huge);
   font-weight: var(--weight-semi-bold);
 }
 
@@ -94,6 +96,21 @@ a {
 .section__container {
   max-width: 1200px;
   margin: auto;
+}
+
+/* Button common */
+.button {
+  background-color: var(--color-bluegreen);
+  color: white;
+  padding: 10px 30px;
+  font-size: var(--font-small);
+  border-radius: var(--size-border-radius);
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-green);
+  transition: all var(--animation-duration) ease;
 }
 
 /* Navbar */
@@ -168,6 +185,11 @@ a {
   padding: 45px 0;
 }
 
+.intro__text {
+  margin: auto;
+  max-width: 777px;
+}
+
 .intro__text > h1,
 .intro__text > p {
   margin-bottom: 30px;
@@ -225,4 +247,37 @@ a {
 
 .intro__boxes .box:hover .box__arrow {
   transform: translateX(0px);
+}
+
+/* About */
+#about {
+  background-color: var(--color-light-gray);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 45px 0;
+  background: url(/images/improve-business.jpg) no-repeat;
+}
+
+.about__empty {
+  padding: 0 15px;
+  min-width: 528px;
+}
+
+.about__text {
+  max-width: 528px;
+  margin-bottom: 30px;
+  padding: 0 12px;
+  color: var(--color-gray);
+}
+
+.about__text > h1,
+.about__text > p {
+  margin-bottom: 40px;
+}
+
+.about__text > h1 {
+  font-size: var(--font-x-large);
 }
