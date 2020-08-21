@@ -94,13 +94,15 @@ a {
 }
 
 .section__container {
-  max-width: 1200px;
+  max-width: 1150px;
   margin: auto;
 }
 
+/* Hover comon */
+
 /* Button common */
 .button {
-  background-color: var(--color-bluegreen);
+  background-color: var(--color-green);
   color: white;
   padding: 10px 30px;
   font-size: var(--font-small);
@@ -145,11 +147,11 @@ a {
 #home {
   background: url(/images/banner.jpg) center/cover no-repeat;
   color: var(--color-white);
-  padding-bottom: 54px;
+  padding-bottom: 25px;
 }
 
 .home {
-  padding: 0 15px;
+  padding: 170px 15px;
   margin: auto;
 }
 
@@ -174,6 +176,25 @@ a {
 }
 
 .home__buttons .button:hover {
+  background-color: var(--color-white);
+  color: var(--color-green);
+  transition: all var(--animation-duration) ease;
+}
+
+.home__circles {
+  text-align: center;
+}
+
+.home__circles .circle {
+  display: inline-block;
+  background-color: var(--color-green);
+  width: 14px;
+  height: 14px;
+  margin: 0 7px;
+  border-radius: 50%;
+}
+
+.home__circles .circle:hover {
   background-color: var(--color-white);
   color: var(--color-green);
   transition: all var(--animation-duration) ease;
@@ -251,24 +272,38 @@ a {
 
 /* About */
 #about {
+  position: relative;
   background-color: var(--color-light-gray);
+}
+
+#about::before {
+  background: url(/images/improve-business.jpg) no-repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
 }
 
 .about {
   display: flex;
   justify-content: center;
   padding: 45px 0;
-  background: url(/images/improve-business.jpg) no-repeat;
 }
 
-.about__empty {
+.about__boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.about__box {
   padding: 0 15px;
   min-width: 528px;
 }
 
 .about__text {
   max-width: 528px;
-  margin-bottom: 30px;
   padding: 0 12px;
   color: var(--color-gray);
 }
@@ -280,4 +315,38 @@ a {
 
 .about__text > h1 {
   font-size: var(--font-x-large);
+}
+
+.about__button:hover {
+  border: solid 1px;
+}
+
+/* Video */
+#video {
+  background: url(/images/video.jpg) center/cover no-repeat;
+  width: 100%;
+  height: auto;
+  padding: 80px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.video > h1,
+.video > p {
+  margin-bottom: 15px;
+}
+
+.video__play {
+  font-size: 52px;
+}
+
+.video__play:hover {
+  color: var(--color-green);
+  transition: all var(--animation-duration) ease;
 }
