@@ -99,10 +99,13 @@ a {
 /* Navbar */
 #navbar {
   background-color: var(--color-black);
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 130px;
+  padding: 14px 15px;
 }
 
 .navbar__logo img {
@@ -151,6 +154,12 @@ a {
   margin-right: 10px;
   font-size: var(--font-small);
   border-radius: var(--size-border-radius);
+}
+
+.home__buttons .button:hover {
+  background-color: var(--color-white);
+  color: var(--color-green);
+  transition: all var(--animation-duration) ease;
 }
 
 /* Intro */
@@ -211,7 +220,7 @@ a {
 .box__arrow {
   font-size: 25px;
   transform: translateX(-10px);
-  transition: all var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration-fast) ease-in-out;
 }
 
 .intro__boxes .box:hover .box__arrow {
