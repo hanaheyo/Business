@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/73b133f9f0.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
   <title>Business</title>
 </head>
+<body></body>
 <!-- Navbar -->
 <nav id="navbar">
-  <div class="navbar section__container">
+  <div class="navbar container">
     <div class="navbar__logo">
       <img src="/images/logo.png" alt="logo" />
     </div>
@@ -33,7 +34,7 @@
 
 <!-- Home -->
 <section id="home">
-  <div class="home section__container">
+  <div class="home container">
     <h1>
       Discover the Business Secrets for <br> Your SUCCESS!
     </h1>
@@ -57,7 +58,7 @@
 </section>
 
 <!-- Intro -->
-<section id="intro" class="section section container">
+<section id="intro" class="center container">
   <div class="intro__text text">
     <h1>Gain The Knowledge you Need to Succed</h1>
     <p>
@@ -142,7 +143,7 @@
 
 <!-- About -->
 <section id="about">
-  <div class="about section__container">
+  <div class="about container">
     <div class="about__boxes">
       <div class="about__box"></div>
       <div class="about__box">
@@ -166,7 +167,7 @@
 
 <!-- Video -->
 <section id="video">
-  <div class="video section section__container">
+  <div class="video center container">
     <h1>Video</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Labore sapiente
@@ -342,8 +343,8 @@
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section">
-  <div class="contact section__container">
+<section id="contact" class="center">
+  <div class="contact container">
     <h1>Get In Touch</h1>
     <div class="contact__box">
       <div class="contact__left">
@@ -422,41 +423,49 @@
 </section>
 
 <!-- Subscribe -->
-<footer id="Subscribe">
-  <div class="subscribe">
-    Sign up for our free newsletter
-    We share the latest on building great companies and careers from around the Web.
-  </div>
-  <div class="subscribe__email">
-    <span>Email</span>
-    <img src="/images/email-box-arrow.png" alt="">
-  </div>
-  <div class="subscribe__infomation">
-    <div class="information__site">
-      <span class="site__company">
-        © Small Business, Inc.
-      </span>
-      <span class="site__design">
-        Designed by Position2
-      </span>
+<footer id="subscribe" class="center">
+  <div class="subcribe container">
+    <div class="subscribe__title">
+      Sign up for our free newsletter <br>
+      We share the latest on building great companies and careers from around the Web.
     </div>
-    <ul class="information__links">
-      <li>
-        <i class="fab fa-facebook-f"></i>
-      </li>
-      <li>
-        <i class="fab fa-twitter"></i>
-      </li>
-      <li>
-        <i class="fab fa-linkedin-in"></i>
-      </li>
-      <li>
-        <i class="fab fa-pinterest"></i>
-      </li>
-    </ul>
+    <div class="subscribe__email">
+      <div class="email__box">
+        <input type="email" class="email">
+        <label for="email">
+          Email
+        </label>
+        <input class="submit">
+      </div>
+    </div>
+    <div class="subscribe__infomation">
+      <div class="information__site">
+        <span class="site__company">
+          © Small Business, Inc.
+        </span>
+        <span class="site__design">
+          Designed by 
+          <span class="site__design-color">
+            Position2
+          </span>
+        </span>
+      </div>
+      <ul class="information__links">
+        <li>
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li>
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li>
+          <i class="fab fa-linkedin-in"></i>
+        </li>
+        <li>
+          <i class="fab fa-pinterest"></i>
+        </li>
+      </ul>
+    </div>
   </div>
 </footer>
-
-<body></body>
-
+</body>
 </html>

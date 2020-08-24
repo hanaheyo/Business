@@ -36,7 +36,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -90,25 +89,23 @@ a {
   background-color: var(--color-green);
 }
 
-/* Section common */
-.section {
+/* Common */
+.center {
   text-align: center;
   margin: auto;
 }
 
-.section__container {
+.container {
   max-width: 1150px;
   margin: auto;
 }
 
-/* Text common */
 .text {
   margin: auto;
   max-width: 777px;
   text-align: center;
 }
 
-/* Button common */
 .button {
   background-color: var(--color-green);
   color: white;
@@ -125,7 +122,11 @@ a {
 
 /* Navbar */
 #navbar {
-  background-color: var(--color-black);
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 .navbar {
@@ -134,6 +135,7 @@ a {
   align-items: center;
   padding: 14px 15px;
 }
+
 
 .navbar__logo img {
   width: 80px;
@@ -153,7 +155,9 @@ a {
 
 /* Home */
 #home {
-  background: url(/images/banner.jpg) center/cover no-repeat;
+  background: url(/images/banner.jpg)no-repeat 0 0 / cover;
+  height: 630px;
+  position: relative;
   color: var(--color-white);
   padding-bottom: 25px;
 }
@@ -163,11 +167,11 @@ a {
   margin: auto;
 }
 
-.home > h1 {
+.home>h1 {
   margin-bottom: 25px;
 }
 
-.home > h2 {
+.home>h2 {
   margin-bottom: 25px;
 }
 
@@ -213,8 +217,8 @@ a {
   padding: 45px 0;
 }
 
-.intro__text > h1,
-.intro__text > p {
+.intro__text>h1,
+.intro__text>p {
   margin-bottom: 30px;
   color: var(--color-light-black);
 }
@@ -238,7 +242,7 @@ a {
   color: var(--color-white);
 }
 
-.box__icon > i {
+.box__icon>i {
   font-size: 90px;
 }
 
@@ -257,8 +261,8 @@ a {
   opacity: 1;
 }
 
-.box__text > h3,
-.box__text > p {
+.box__text>h3,
+.box__text>p {
   margin-bottom: 15px;
 }
 
@@ -310,12 +314,12 @@ a {
   color: var(--color-light-black);
 }
 
-.about__text > h1,
-.about__text > p {
+.about__text>h1,
+.about__text>p {
   margin-bottom: 40px;
 }
 
-.about__text > h1 {
+.about__text>h1 {
   font-size: var(--font-x-large);
 }
 
@@ -339,8 +343,8 @@ a {
   color: var(--color-white);
 }
 
-.video > h1,
-.video > p {
+.video>h1,
+.video>p {
   margin-bottom: 15px;
 }
 
@@ -358,6 +362,7 @@ a {
 #work {
   padding-top: 45px;
 }
+
 .work__text h1 {
   font-size: var(--font-x-large);
   font-weight: var(--weight-semi-bold);
@@ -488,8 +493,7 @@ a {
   display: flex;
 }
 
-.not_empty {
-}
+.not_empty {}
 
 .contact__left {
   padding: 40px;
@@ -552,8 +556,8 @@ a {
   border-bottom: 1px solid var(--color-bluegreen);
 }
 
-.contact__write input:focus ~ label,
-.contact__write .message:focus ~ label {
+.contact__write input:focus~label,
+.contact__write .message:focus~label {
   top: -18px;
   font-size: var(--font-micro);
   font-weight: var(--weight-regular);
@@ -612,4 +616,117 @@ a {
   width: 1px;
   height: 80%;
   background: var(--color-bar-gray);
+}
+
+/* Subscribe */
+#subscribe {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 75px 0 50px 0;
+}
+
+.subcribe {
+  padding: 0 15px;
+}
+
+.subscribe__title {
+  margin-bottom: 30px;
+  font-size: var(--font-small);
+  font-weight: var(--font-regular);
+}
+
+.subscribe__email {
+  padding-bottom: 100px;
+}
+
+.email__box {
+  position: relative;
+  display: inline-block;
+  color: var(--color-white);
+}
+
+.email__box .email {
+  padding: 5px 40px 5px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.email__box .email:focus {
+  outline: 0;
+  border-bottom: solid 1px var(--color-green);
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+}
+
+.email__box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.email__box .email:focus~label {
+  font-size: var(--font-x-samll);
+  font-weight: var(--font-regular);
+  color: var(--color-green);
+  top: -18px;
+  z-index: -1;
+}
+
+.email__box .submit {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  background: url(/images/email-box-arrow.png) no-repeat;
+  padding: 0 4px;
+  border: none;
+  width: 20px;
+}
+
+.email__box .submit:focus {
+  outline: 0;
+  cursor: pointer;
+}
+
+.subscribe__infomation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site__company {
+  display: block;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  margin-bottom: 10px;
+}
+
+.site__design {
+  position: absolute;
+  left: 0;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+}
+
+.site__design-color {
+  color: var(--color-green)
+}
+
+.information__links {
+  display: flex
+}
+
+.information__links li {
+  padding: 10px;
+}
+
+.information__links li:hover i {
+  color: var(--color-green);
+}
+
+.information__links li i {
+  font-size: 18px;
 }
