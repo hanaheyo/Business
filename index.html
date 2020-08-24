@@ -172,7 +172,7 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Labore sapiente
       cumque est, quaerat sequi aperiam quae repellendus.
     </p>
-    <a href="/video/video.mp4" class="video__play">
+    <a href="/video/video.mp4" class="video__play" target="blank">
       <i class="fas fa-play"></i>
     </a>
   </div>
@@ -342,27 +342,42 @@
 </section>
 
 <!-- Contact -->
-<section id="contact">
-  <h1>Get In Touch</h1>
-  <div class="contact">
-    <div class="contact__left">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <div class="contact__write">
-        <ul class="write__detail">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-        </ul>
-        <textarea name="" class="write__message" cols="30" rows="10"></textarea>
+<section id="contact" class="section">
+  <div class="contact section__container">
+    <h1>Get In Touch</h1>
+    <div class="contact__box">
+      <div class="contact__left">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="contact__write">
+          <div class="input__frame input__frame-left">
+            <input type="text">
+            <label for="text">Full Name</label>
+          </div>
+          <div class="input__frame">
+            <input type="email">
+            <label for="email">Email</label>
+          </div>
+          <div class="input__frame input__frame-left">
+            <input type="tel">
+            <label for="tel">Contact</label>
+          </div>
+          <div class="input__frame">
+            <input type="text">
+            <label for="text">Company</label>
+          </div>
+          <div class="message__frame">
+            <textarea name="" class="message"></textarea>
+            <label for=" message">
+              Your Message
+            </label>
+          </div>
+        </div>
+        <button class="contact__button button">
+          Submit
+        </button>
       </div>
-      <button class="contact__submit">
-
-      </button>
-    </div>
-    <div class="contact__right">
-      <h2>Contact Details</h2>
-      <div class="contact__details">
+      <div class="contact__right">
+        <h2>Contact Details</h2>
         <div class="detail">
           <div class="detail__icon">
             <i class="fas fa-address-book"></i>
@@ -384,7 +399,7 @@
             <span class="text__title">
               Mobile
             </span>
-            <span class="text__content">
+            <span class="text__content hover">
               +1234567890
             </span>
           </div>
@@ -397,7 +412,7 @@
             <span class="text__title">
               Email
             </span>
-            <span class="text__content">
+            <span class="text__content hover">
               abc@abc.com
             </span>
           </div>
