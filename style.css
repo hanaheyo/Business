@@ -17,7 +17,7 @@
   --font-medium: 20px;
   --font-regular: 18px;
   --font-small: 16px;
-  --font-x-samll: 14px;
+  --font-x-small: 14px;
   --font-micro: 12px;
 
   /* Font weight */
@@ -544,7 +544,7 @@ a {
   left: 0;
   padding: 0;
   margin-bottom: 8px;
-  font-size: var(--font-x-samll);
+  font-size: var(--font-x-small);
   font-weight: var(--weight-regular);
   color: var(--color-gray);
   transition: top var(--animation-duration) ease-in-out;
@@ -650,15 +650,15 @@ a {
   background: transparent;
   border: 0;
   border-bottom: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
   transition: all var(--animation-duration) ease-in-out;
 }
 
 .email__box .email:focus {
   outline: 0;
   border-bottom: solid 1px var(--color-green);
-  color: var(--color-white);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
 }
 
 .email__box label {
@@ -669,11 +669,10 @@ a {
 }
 
 .email__box .email:focus~label {
-  font-size: var(--font-x-samll);
+  font-size: var(--font-x-small);
   font-weight: var(--font-regular);
   color: var(--color-green);
   top: -18px;
-  z-index: -1;
 }
 
 .email__box .submit {
